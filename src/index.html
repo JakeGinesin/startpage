@@ -22,19 +22,6 @@
 			<h3>Welcome, Jake</h3>
 			<h5 id="datestamp"></h5>
 		</div>
-		<!-- <h2>Hello</h2>
-		<p>
-			Click on the <b>plus sign button</b> to generate a <b>note</b>, the note will be
-			stored in your localStorage so you won't lose it after leaving the page,
-			you can delete notes by selecting them and clicking the escape key, if you
-			wrongfully deleted one you didn't want to delete, you can undo it by
-			pressing escape again.
-		</p>
-		<p>
-			The notes aren't the cool part however, the link categories thing (SOCIAL, EMAIL...)
-			are 3D cards, try hovering around them, cool ah?
-		</p> -->
-		<!-- Span because that horrible accesibility for stupid button losers -->
 		<span id="notebook" onclick="createNote(event.clientX-100, event.clientY-100)">+</span>
 	</div>
 
@@ -50,15 +37,11 @@
 			<a href="https://reddit.com">Reddit</a>
 			<a href="https://twitter.com">Twitter</a>
 			<a href="https://gmail.com">Gmail</a>
-			<!-- <a href="https://speedrun.com">SRC</a> -->
 			<a href="https://discord.com">Discord</a>
 			<a href="https://www.linkedin.com/">LinkedIn</a>
 		</section>
 		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">
 			<h2>School</h2>
-			<!-- <a href="https://mail.zoho.eu">Zoho Mail</a>
-			<a hre="https://hotmail.com">Hotmail</a>
-			<a href="https://www.guerrillamail.com">Guerrilla Mail</a> -->
 			<a href="https://my.northeastern.edu/group/student/services-links">NEU</a>
 			<a href="https://colonialsd.instructure.com/login/ldap">Canvas</a>
 		</section>
