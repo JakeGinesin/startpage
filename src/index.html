@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Startup Page</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+	<div id="left">
+		<div id="clock">
+			<code id="timestamp">00:00:00</code>
+			<span id="hour"></span>
+			<span id="minute"></span>
+			<span id="second"></span>
+		</div>
+		<div id="text">
+			<h3>Welcome, Jake</h3>
+			<h5 id="datestamp"></h5>
+		</div>
+		<!-- <h2>Hello</h2>
+		<p>
+			Click on the <b>plus sign button</b> to generate a <b>note</b>, the note will be
+			stored in your localStorage so you won't lose it after leaving the page,
+			you can delete notes by selecting them and clicking the escape key, if you
+			wrongfully deleted one you didn't want to delete, you can undo it by
+			pressing escape again.
+		</p>
+		<p>
+			The notes aren't the cool part however, the link categories thing (SOCIAL, EMAIL...)
+			are 3D cards, try hovering around them, cool ah?
+		</p> -->
+		<!-- Span because that horrible accesibility for stupid button losers -->
+		<span id="notebook" onclick="createNote(event.clientX-100, event.clientY-100)">+</span>
+	</div>
+
+	<form method="GET" action="https://google.com/search">
+		<input type="text" placeholder="Search" id="search" autofocus autocomplete="off" name="q">
+		<h1>카드 집</h1>
+	</form>
+
+
+	<div id="deck">
+		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">
+			<h2>Social</h2>
+			<a href="https://reddit.com">Reddit</a>
+			<a href="https://twitter.com">Twitter</a>
+			<a href="https://gmail.com">Gmail</a>
+			<!-- <a href="https://speedrun.com">SRC</a> -->
+			<a href="https://discord.com">Discord</a>
+			<a href="https://www.linkedin.com/">LinkedIn</a>
+		</section>
+		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">
+			<h2>School</h2>
+			<!-- <a href="https://mail.zoho.eu">Zoho Mail</a>
+			<a hre="https://hotmail.com">Hotmail</a>
+			<a href="https://www.guerrillamail.com">Guerrilla Mail</a> -->
+			<a href="https://my.northeastern.edu/group/student/services-links">NEU</a>
+			<a href="https://colonialsd.instructure.com/login/ldap">Canvas</a>
+		</section>
+		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">
+			<h2>Lazy</h2>
+			<a href="https://www.youtube.com/">Youtube</a>
+			<a href="https://twitch.tv">Twitch</a>
+			<a href="https://amazon.com">Amazon</a>
+			<a href="https://ebay.com">Ebay</a>
+			<a href="https://www.4chan.org/">4chan</a>
+		</section>
+		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">
+			<h2>Code</h2>
+			<a href="https://github.com">Github</a>
+			<a href="https://www.heroku.com/">Heroku</a>
+		</section>
+	</div>
+
+</body>
+</html>
