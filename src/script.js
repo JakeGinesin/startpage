@@ -1,3 +1,10 @@
+// document.getElementById("search").dispatchEvent(new KeyboardEvent('keydown',{'key':'tab'}));
+document.getElementById("search").focus();
+document.getElementById("search").select();
+
+window.onload=function(){
+  document.getElementById("search").click();
+};
 
 var lastChild = null;
 document.onkeydown = function(e) {
@@ -139,3 +146,34 @@ function calibrate() {
 }
 calibrate();
 setInterval(calibrate, 1000);
+
+//hotkeys
+let control = false;
+let alt = false;
+document.addEventListener("keydown", (event)=>{
+	 if(event.key=="Control") control = true;
+	 else if(event.key=="Alt") alt = true;
+	 if(alt && control){
+		 console.log("alt+control");
+		 switch(event.key){
+			 case "g":
+			 		window.location="https://www.google.com";
+			 		break;
+			 case "r":
+			 		window.location="https://www.reddit.com";
+			 		break;
+		   case "d":
+					window.location="https://www.discord.com";
+					break;
+			 case "t":
+					window.location="https://www.twitter.com";
+					break;
+			 default:
+			 		break;
+		 }
+	 }
+});
+document.addEventListener("keyup", (event)=>{
+	if(event.key=="Control") control = false;
+	if(event.key=="Alt") alt = false;
+});
