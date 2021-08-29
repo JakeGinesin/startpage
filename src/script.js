@@ -177,3 +177,44 @@ document.addEventListener("keyup", (event)=>{
 	if(event.key=="Control") control = false;
 	if(event.key=="Alt") alt = false;
 });
+
+// document.getElementById("center").addEventListener("click", (event) => {
+//   // let objects = ["clock", "text", "notebook", "deck", "right"];
+//   let objects = ["clock"];
+//   // let x = event.pageX;
+//   // let y = event.pageY;
+//   // console.log(x);
+//   // console.log(y);
+//   // console.log(document.querySelector("#clock").offsetTop);
+//   // console.log(document.querySelector("#clock").offsetLeft);
+//   // console.log(document.getElementById("center").offsetTop);
+//   // console.log(document.getElementById("center").offsetLeft);
+//
+//   objects.forEach(object => {
+//     let objx = document.getElementById(object).offsetLeft;
+//     let objy = document.getElementById(object).offsetTop;
+//
+//     let slope = (event.pageY - objy)/(event.pageX-objx);
+//     // console.log(slope);
+//
+//     let updatedx = objx - 1000;
+//     let updatedy = objy - 1000 * slope;
+//
+//     console.log(updatedx);
+//     console.log(updatedy);
+//
+//     // document.getElementById(object).style.position = "absolute";
+//     document.getElementById(object).style.top = updatedx - objx;
+//     document.getElementById(object).style.left = updatedy - objy;
+//
+//
+//   });
+//
+//   //find coordinates of each object
+//   //use center coordinates to create a vector pointing off screen
+//   //  ** how the ufck do I calculuate a vector
+//   //move objects *away*
+//   //find a way to move them back
+// });
+
+// document.addEventListener("click", (event)=>console.log(event));

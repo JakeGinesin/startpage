@@ -160,6 +160,8 @@ div#clock {
 	background-image: radial-gradient(white 5%, #333 5%);
 	box-shadow: -5px 0px 0px rgba(0,0,0,.3);
 	margin-right:32vw;
+	/* transition-duration:5s; */
+	transition-timing-function:ease;
 }
 div#clock > code#timestamp {
 	background-color: #111;
@@ -270,6 +272,25 @@ textarea.note {
 	box-shadow: -10px 10px 0px rgba(0,0,0,.3);
 	color: white;
 }
+
+/* center */
+div#center {
+	border-radius:50%;
+	position:absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	width:80px;
+	height:80px;
+	background-color: #341A1A;
+	border:1px #1f1f1f solid;
+	display:inline-block;
+	z-index:2;
+}
+div#center:hover{
+	cursor:pointer;
+}
+
 /* changes for my laptop */
 @media only screen and (max-width: 1700px) {
   span#notebook{
