@@ -11,6 +11,11 @@
 </head>
 <body>
 
+	<form method="GET" action="https://google.com/search" id="right">
+		<input type="text" placeholder="Search" id="search" autocomplete="off" name="q">
+		<h1>카드 집</h1>
+	</form>
+
 	<div id="left">
 		<div id="clock">
 			<code id="timestamp">00:00:00</code>
@@ -25,10 +30,7 @@
 		<span id="notebook" onclick="createNote(event.clientX-100, event.clientY-100)">+</span>
 	</div>
 
-	<form method="GET" action="https://google.com/search" id="right">
-		<input type="text" placeholder="Search" id="search" autocomplete="off" name="q">
-		<h1>카드 집</h1>
-	</form>
+
 
 	<div id="deck">
 		<section class="card" onmousemove="perspective(this, event)" onmouseleave="reset(this)">

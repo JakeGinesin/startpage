@@ -309,3 +309,38 @@ div#center:hover{
 		width:550px;
 	}
 }
+
+@media only screen and (max-width:1500px){
+	div#text{
+		display:none;
+	}
+	div#deck{
+		display:none;
+	}
+}
+
+@media only screen and (max-width:900px){
+ form {
+	 width:65vw;
+ }
+}
+@media only screen and (max-width:650px){
+	div#clock{
+		display:none;
+	}
+	form {
+		width:100vw;
+		float:none;
+	}
+	form > input#search{
+		width:100%;
+	}
+	div#left{
+		width:100%;
+		display:block;
+		margin-top:20vh;
+	}
+	h1{
+		text-align:left;
+	}
+}
