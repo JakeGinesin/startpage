@@ -213,6 +213,9 @@ div#text > h3 {
 	width:100%;
 	text-align:center;
 }
+div#text > h5 {
+	width:540px;
+}
 /*
 	Search
 */
